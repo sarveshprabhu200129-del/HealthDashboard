@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="395" id="KGk-i7-Jjw" customClass="BodySignalsCell" customModule="HealthDashboard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="404.66665649414062"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="404.66665649414062"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJ5-GF-SKj">
+                        <rect key="frame" x="16" y="8" width="288" height="388.66666666666669"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jQe-VC-gkL">
+                                <rect key="frame" x="16" y="16" width="256" height="356.66666666666669"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ECL-Qs-5Ti">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="44.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="654-Yu-67T">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGh-Im-8OG">
+                                                <rect key="frame" x="0.0" y="24.333333333333336" width="256" height="20.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajL-nC-ARQ" customClass="SymptomTrendsChartView" customModule="HealthDashboard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="56.666666666666686" width="256" height="300"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="uy1-uv-HKc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jQe-VC-gkL" firstAttribute="top" secondItem="MJ5-GF-SKj" secondAttribute="top" constant="16" id="DUM-JT-WPi"/>
+                            <constraint firstAttribute="bottom" secondItem="jQe-VC-gkL" secondAttribute="bottom" constant="16" id="IW6-HE-5BG"/>
+                            <constraint firstAttribute="trailing" secondItem="jQe-VC-gkL" secondAttribute="trailing" constant="16" id="X1Y-x8-I61"/>
+                            <constraint firstItem="jQe-VC-gkL" firstAttribute="leading" secondItem="MJ5-GF-SKj" secondAttribute="leading" constant="16" id="ZFx-Yg-sUi"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="MJ5-GF-SKj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ze3-I9-Vlv"/>
+                    <constraint firstAttribute="trailing" secondItem="MJ5-GF-SKj" secondAttribute="trailing" constant="16" id="ejD-Ig-xuZ"/>
+                    <constraint firstAttribute="bottom" secondItem="MJ5-GF-SKj" secondAttribute="bottom" constant="8" id="iX7-Xv-v8f"/>
+                    <constraint firstItem="MJ5-GF-SKj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="xOy-RQ-FgT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="containerView" destination="MJ5-GF-SKj" id="eOJ-NA-tb7"/>
+                <outlet property="graphView" destination="ajL-nC-ARQ" id="BjK-H5-0ij"/>
+                <outlet property="subtitleLabel" destination="WGh-Im-8OG" id="xQL-2D-Lj2"/>
+                <outlet property="titleLabel" destination="654-Yu-67T" id="V3H-Xl-q0s"/>
+            </connections>
+            <point key="canvasLocation" x="51.908396946564885" y="238.38028169014086"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
